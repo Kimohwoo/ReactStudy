@@ -3,18 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Animal from './test/Animal';
-import Tick from './test/Tick';
-import WeekendSchedule from './test/WeekendSchedule';
-import Mytest from './test/Mytest';
-import CommentList from './ch5/CommentList';
-import NotiList from './ch6/NotiList';
-import MenuItemList from './0530실습/MenuItemList';
-import TestSample from './ch6/TestSample';
-import Input from './0530실습/Input';
-import Counter from './ch7/Counter';
-import TestBefort from './ch7-2-useMemo/TestBefort';
-import TestAfter from './ch7-2-useMemo/TestAfter';
+import AfterUseCallback from './ch7-3-useCallback/AfterUseCallback';
 
 // setInterval(
 //   () => {
@@ -36,7 +25,7 @@ import TestAfter from './ch7-2-useMemo/TestAfter';
 //수행이 2번씩 일어남
 ReactDOM.render(
   <React.StrictMode>
-    <TestAfter/>
+    <AfterUseCallback/>
   </React.StrictMode>,
   document.getElementById('root')
 );
