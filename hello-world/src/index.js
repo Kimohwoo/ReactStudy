@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AfterUseCallback from './ch7-3-useCallback/AfterUseCallback';
+import TextInputTest from './ch7/TextInputTest';
+import UserListItem from './0531실습/UserListItem';
+import UserStatus from './0531실습/UserStatus';
+import Toggle from './ch8/Toggle';
 
 // setInterval(
 //   () => {
@@ -25,7 +28,7 @@ import AfterUseCallback from './ch7-3-useCallback/AfterUseCallback';
 //수행이 2번씩 일어남
 ReactDOM.render(
   <React.StrictMode>
-    <AfterUseCallback/>
+    <Toggle/>
   </React.StrictMode>,
   document.getElementById('root')
 );
