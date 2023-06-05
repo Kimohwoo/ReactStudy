@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TextInputTest from './ch7/TextInputTest';
-import UserListItem from './0531실습/UserListItem';
-import UserStatus from './0531실습/UserStatus';
-import Toggle from './ch8/Toggle';
+import TestNullValue from './ch11/TestNullValue';
+import FormPractice from './0601실습/FormPractice';
+import Calc from './ch12/Calc';
+import TestInput from './ch12/TestInput';
+import BMI from './0601실습/BMI';
+import WelcomeDialog from './ch13/WelcomeDialog';
+import Card from './ch13/Card';
+import ProfileCard from './ch13/ProfileCard';
+import Main from './ch14/Main';
+import MainPage from './ch15/MainPage';
 
 // setInterval(
 //   () => {
@@ -15,7 +20,7 @@ import Toggle from './ch8/Toggle';
 //         {/* <Tick />
 //         <WeekendSchedule schedule = "할일" />
 //         <WeekendSchedule schedule = "할일2" /> */}
-//         {/* <Mytest name="김오우" number={7}>
+//         {/* <Mytest name="김" number={7}>
 //           child영역 입니다.
 //         </Mytest> */}
 //       </React.StrictMode>,
@@ -28,10 +33,16 @@ import Toggle from './ch8/Toggle';
 //수행이 2번씩 일어남
 ReactDOM.render(
   <React.StrictMode>
-    <Toggle/>
+    <MainPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
+// setTimeout(
+//   () => {
+//     ReactDOM.render(<input value={null}/>, document.getElementById('root'))
+//   },
+//   1000
+// )
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
