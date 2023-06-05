@@ -1,17 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
-import TestNullValue from './ch11/TestNullValue';
-import FormPractice from './0601실습/FormPractice';
-import Calc from './ch12/Calc';
-import TestInput from './ch12/TestInput';
-import BMI from './0601실습/BMI';
-import WelcomeDialog from './ch13/WelcomeDialog';
-import Card from './ch13/Card';
-import ProfileCard from './ch13/ProfileCard';
-import Main from './ch14/Main';
-import MainPage from './ch15/MainPage';
+import App from './App';
 
 // setInterval(
 //   () => {
@@ -29,11 +19,20 @@ import MainPage from './ch15/MainPage';
 //   },1000
 // )
 
+//최고 부모가 없음
+//App.js 최고부모로 -> 1) categories 2) ItemList
+// const [category, setCategory] = useState("food")
+// const onSelect = useCallback(
+//     (category) => setCategory(category)
+//     ,[])
+
 //생명주기를 테스트를 하는 코드에서, React.StrictMode제거하고 실행하는게 가독성면에서 좋음
 //수행이 2번씩 일어남
 ReactDOM.render(
   <React.StrictMode>
-    <MainPage/>
+    <App/>
+    {/* <Categories category={category} onSelect={onSelect}/>
+    <ItemList category={category}/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
