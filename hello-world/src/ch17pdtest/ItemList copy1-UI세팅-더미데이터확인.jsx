@@ -50,9 +50,9 @@ const ItemList = ({category}) => {
                             break;
 
                         case "weather":
-                            response = await axios.get("https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst?serviceKey=cXgLGxZlC%2BV%2F06%2B8LDomc9m8TAR6VHymyLNbeFGuwGCIJcUfxAkVDHaPa3HQx5HeT0kWSkyFnh0JdmOV8rTiRg%3D%3D&pageNo=1&numOfRows=1000&dataType=XML&base_date=20230605&base_time=0630&nx=55&ny=127")
+                            response = await axios.get("https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst?serviceKey=cXgLGxZlC%2BV%2F06%2B8LDomc9m8TAR6VHymyLNbeFGuwGCIJcUfxAkVDHaPa3HQx5HeT0kWSkyFnh0JdmOV8rTiRg%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=20230605&base_time=0630&nx=55&ny=127")
                             // console.log("weather : " + response.data.response.body.items.item)
-                            setArticles(response.body.items.item)
+                            setArticles(response.data.response.body.items.item)
                             break;
 
                         default:
@@ -80,7 +80,7 @@ const ItemList = ({category}) => {
     return (
         <ItemListBlock>
             {articles.map((article) => (
-                <PdItem key={article.MAIN_TITLE} article={article} />
+                <PdItem key={article.index} article={article} />
             ))}
         </ItemListBlock>
     );

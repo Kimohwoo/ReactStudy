@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+import ItemList from './ch17pdtest/ItemList copy1-UI세팅-더미데이터확인';
 
 // setInterval(
 //   () => {
