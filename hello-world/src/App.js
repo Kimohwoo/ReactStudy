@@ -1,20 +1,30 @@
 import './App.css';
-import { useCallback, useState } from 'react';
-import Categories from './ch17pdtest/Categories';
-import ItemList from './ch17pdtest/ItemList copy1-UI세팅-더미데이터확인';
+import { Route, Routes } from 'react-router-dom';
+import ItemsPage from './ch17pdtest/pages/ItemsPage';
+
 
 
 function App() {
-  const [category, setCategory] = useState("food")
-  const onSelect = useCallback(
-      category => setCategory(category)
-      ,[])
+  //방법1
+  // const [category, setCategory] = useState("food")
+  // const onSelect = useCallback(
+  //     category => setCategory(category)
+  //     ,[])
+  // return (
+  //   <div>
+  //     <Categories category={category} onSelect={onSelect}/>
+  //     <ItemList category={category}/> 
+  //   </div>
+  // );
+
+
+  //방법2
 
   return (
-    <div>
-      <Categories category={category} onSelect={onSelect}/>
-      <ItemList category={category}/> 
-    </div>
+    <Routes>
+      <Route path="/" element={<ItemsPage/>}/>
+      <Route path="/:category" element={<ItemsPage/>} />
+    </Routes>
   );
 }
 

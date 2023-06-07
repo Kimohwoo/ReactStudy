@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+import {BrowserRouter} from 'react-router-dom'
 
 // setInterval(
 //   () => {
@@ -29,11 +30,11 @@ import App from './App';
 //생명주기를 테스트를 하는 코드에서, React.StrictMode제거하고 실행하는게 가독성면에서 좋음
 //수행이 2번씩 일어남
 ReactDOM.render(
-  <React.StrictMode>
-    <App/>
-    {/* <Categories category={category} onSelect={onSelect}/>
-    <ItemList category={category}/> */}
-  </React.StrictMode>,
+  // <React.StrictMode>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 // setTimeout(
