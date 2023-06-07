@@ -44,6 +44,8 @@ const PdItem = ({article}) => {
 //수행의 결과는 li라는 태그에 요소로 넣고 있음
 // const nameList = names.map(names => <li key={names.id} onDoubleClick={(onRemove)} >{names.text}</li>);
 
+        var {MAIN_TITLE, MAIN_IMG_NORMAL, ITEMCNTNTS } = article;
+        var {baseDate, baseTime, fcstDate} = article;
     return (
             <PdItemBlock>
                 {MAIN_IMG_NORMAL && (
@@ -53,16 +55,9 @@ const PdItem = ({article}) => {
                         </a>
                     </div>
                     )}
-                    {MAIN_TITLE &&(
                     <div className='contents'>
                         <h2>{MAIN_TITLE}</h2>
                         <p>{ITEMCNTNTS}</p>
-                    </div>
-                    )}
-                    <div className='contents'>
-                        {/* <h2>{baseDate}</h2>
-                        <p>{baseTime}</p>
-                        <p>{fcstDate}</p> */}
                     </div>
             </PdItemBlock>
     );
